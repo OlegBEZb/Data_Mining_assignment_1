@@ -1,0 +1,2 @@
+statsmodel==0.13.2
+pmdarima==1.8.5
