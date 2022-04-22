@@ -46,11 +46,11 @@ def half_round(inp):
 
 
 def eval_regr(y_test, y_pred):
-    raw_rmse = round(mean_squared_error(y_test, y_pred, squared=True), 2)
+    raw_rmse = round(mean_squared_error(y_test, y_pred, squared=False), 2)
 
     y_test = half_round(y_test)
     y_pred = half_round(y_pred)
-    rounded_rmse = round(mean_squared_error(y_test, y_pred, squared=True), 2)
+    rounded_rmse = round(mean_squared_error(y_test, y_pred, squared=False), 2)
 
     if rounded_rmse == raw_rmse:
         print('probably, already rounded values were passed')
