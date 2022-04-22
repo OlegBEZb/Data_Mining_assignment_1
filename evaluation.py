@@ -17,7 +17,7 @@ def eval_clf(y_test, y_pred):
 
     test_labels = set(np.unique(y_test))
     pred_labels = set(np.unique(y_pred))
-    labels = test_labels.union(pred_labels)
+    labels = sorted(test_labels.union(pred_labels))
 
     conf_matrix = confusion_matrix(y_test,
                                    y_pred)
